@@ -1,0 +1,39 @@
+{
+    "name": "generated_backend",
+    "version": "1.0.0",
+    "description": "generated_backend is the ultimate backend solution",
+    "main": "src/server.js",
+    "scripts": {
+        "setup": "npm install && npm update",
+        "start": "node src/server.js"
+    },
+    "keywords": [
+        "express",
+        "backend",
+        "generated_backend"
+    ],
+    "license": "UNLICENSED",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "cookie-parser": "^1.4.4",
+        "cors": "^2.8.5",
+        "express": "^4.19.2",
+        "express-custom-error": "^1.8.4",
+        "has-keys": "^0.1.0",
+        "helmet": "^3.21.2",
+        "http-status": "^1.3.2",
+        "mandatoryenv": "^1.1.1",
+        "module-alias": "^2.2.2",
+        "mongodb": "^3.3.3",
+        "mongoose": "^8.3.2",
+        "morgan": "^1.9.1",
+        "rotating-file-stream": "^1.4.6"
+    },
+    "_moduleAliases": {
+        "@root": "src",
+        "@controllers": "src/controllers",
+        "@models": "src/models",
+        "@util": "src/util",
+        "@routes": "src/routes"
+    }
+}

@@ -1,0 +1,21 @@
+/* QuestionGuideLinesCard.css */
+
+.question-guidelines-card-container {
+    display: flex;
+    justify-content: center;
+    margin-right: 10%;
+}
+
+.question-guidelines-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px; /* Adjust width as needed */
+    margin-top: 20px;
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.question-guidelines-card:hover {
+    transform: translateY(-5px); /* Apply transformation on hover */
+}

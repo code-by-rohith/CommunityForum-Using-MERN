@@ -1,0 +1,100 @@
+/* Base styles */
+.questions-container {
+    font-family: Arial, sans-serif;
+    margin-left: 20%;
+}
+
+.q {
+    text-align: center;
+    margin-right: 10%;
+    background-color: #848484;
+    padding: 5%;
+    padding-top: 4%;
+}
+
+.ask-button {
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block; /* Change to block level element */ /* Center the button horizontally */
+    font-size: 16px;
+    margin-top: 20px; /* Add top margin to separate from header */
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 35%;
+   
+}
+
+.ask-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.modal-content {
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 80%;
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content form {
+    margin-top: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal-content button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,470 @@
+/* Base styles */
+.questions-container {
+    font-family: Arial, sans-serif;
+    margin-left: 20%;
+}
+
+.q {
+    text-align: center;
+    margin-right: 10%;
+    background-color: #848484;
+    padding: 5%;
+    padding-top: 4%;
+}
+
+main {
+    padding: 20px;
+}
+
+.question {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.question:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index: -1;
+    border-radius: 10px;
+    transition: opacity 0.4s ease;
+    opacity: 0;
+}
+
+.question:hover:before {
+    opacity: 1;
+}
+
+.question:hover {
+    transform: translateY(-5px) rotateX(10deg);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.question-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.question-body h2 {
+    margin-top: 0;
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.actions a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.question:hover .question-info {
+    background-color: #f0f0f0;
+    border-radius: 10px 10px 0 0;
+}
+
+.question:hover .actions {
+    visibility: visible;
+}
+
+.answer-link {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 8px 20px;
+    border: 2px solid #007bff;
+    border-radius: 30px;
+    color: #007bff;
+    text-decoration: none;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+.answer-link:hover {
+    background-color: #007bff;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Ultra level effects */
+.question:hover {
+    filter: grayscale(10%) brightness(90%);
+}
+
+.question:hover:before {
+    backdrop-filter: blur(8px);
+}
+
+.answer-link {
+    backdrop-filter: blur(8px);
+}
+
+/* Search input */
+.search-input {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 2%;
+    width: 20%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Modal styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Additional styling for the modal content */
+.modal h2 {
+    margin-top: 0;
+}
+
+.modal p {
+    margin-top: 0;
+}
+
+/* Styling for answer cards */
+.comment-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Ensure answer cards take full width */
+    background-color: #f8f9fa; /* Background color for answer cards */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Apply transition effect */
+    transform-style: preserve-3d; /* Enable 3D transformation */
+}
+
+.comment-item:hover {
+    transform: translateY(-5px) rotateX(5deg); /* Apply 3D rotation on hover */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+
+.comment-text {
+    flex: 1;
+    margin-right: 15px; /* Add margin between text and vote buttons */
+}
+
+.comment-votes {
+    display: flex;
+    align-items: center;
+}
+
+.upvote-btn,
+.downvote-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+.votes-count {
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+/* Styling for vote buttons */
+.upvote-btn:hover,
+.downvote-btn:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+.add-comment-container {
+    margin-top: 20px;
+}
+
+.add-comment-container input[type="text"] {
+    width: calc(100% - 100px); /* Adjust width as needed */
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.add-comment-container button {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-comment-container button:hover {
+    background-color: #0056b3;
+}
+
+.comment-item {
+    margin-bottom: 20px; /* Add margin bottom to create a gap between answers */
+}
+
+/* Additional styles for the answer cards */
+.answer-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.answer-card:hover {
+    transform: translateY(-5px); /* Move up on hover */
+}
+
+.answer-card h3 {
+    margin-top: 0;
+}
+
+.answer-card p {
+    margin-bottom: 10px;
+}
+
+/* Additional styles for the answer paragraphs */
+.comment-item p {
+    margin-top: 5px; /* Add some space between answer paragraphs */
+}
+
+/* Adjust font size and line height for better readability */
+.comment-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Add a border to separate answer paragraphs */
+.comment-item p {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+/* Add margin to the top of the first answer paragraph */
+.comment-item p:first-of-type {
+    margin-top: 0;
+}
+
+.jum {
+    vertical-align: middle;
+    margin-right: 5px; /* Adjust margin as needed */
+}
+.tittle {
+    color: #4f7087;
+}
+.ask-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-left: 55%;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.ask-button:hover {
+    background-color: #45a049; /* Darker Green */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.modal-content {
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+    border-radius: 5px;
+    position: relative;
+    max-width: 80%;
+    overflow: auto;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content form {
+    margin-top: 20px;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.modal-content button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.bold,
+.italic {
+    font-weight: normal;
+    font-style: normal;
+    border: 2px solid transparent;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.bold:hover,
+.italic:hover {
+    border-color: #007bff; /* Change border color on hover */
+    color: #007bff; /* Change text color on hover */
+    background-color: transparent; /* Change background color on hover */
+}
+/* ques1.css */
+
+.tags {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #45a049;
+  }
+  
+  .tags svg {
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  
+  .tags span {
+    background-color: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-right: 5px;
+    color: #333;
+  }
+  
+  .tags span:last-child {
+    margin-right: 0;
+  }
+  .trending-tag {
+    /* Styles for the #Trending tag */
+    background-color: #ff5722; /* Example background color for the tag */
+    color: #fff; /* Example text color for the tag */
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    animation: glow 1.5s infinite alternate; /* Apply the glow animation */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #ff5722, 0 0 20px #ff5722, 0 0 30px #ff5722; /* Define the glow effect */
+    }
+    to {
+        box-shadow: none; /* Reset the glow effect */
+    }
+}
+
+.question.trending {
+    /* Additional styles for trending questions */
+    border: 2px solid #ff5722; /* Example border color for trending questions */
+    animation: glow-border 1.5s infinite alternate; /* Apply the border glow animation */
+}
+
+@keyframes glow-border {
+    from {
+        border-color: #ff5722; /* Border color for glow effect */
+    }
+    to {
+        border-color:#848484; /* Reset border color */
+    }
+}

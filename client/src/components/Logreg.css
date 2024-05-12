@@ -1,0 +1,160 @@
+/* Logreg.css */
+
+/* Style for login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  /* Style for form container */
+  .form-container {
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Style for form elements */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 95%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Style for buttons */
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.2s, background-color 0.2s;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  .btn-link {
+    background: none;
+    border: none;
+    color: #007bff;
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .btn-link:hover {
+    color: #0056b3;
+    transform: translateY(-2px);
+  }
+  .wel {
+    font-size:225%;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px; /* Adjust as needed */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adjust the values for desired shadow effect */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Adjust the values for desired shadow effect */
+}
+/* Logreg.css */
+
+/* Existing styles... */
+
+.alert1 {
+    background-color: #28a745; /* Green background color */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 10px; /* Spacing from other elements */
+    opacity: 0; /* Initially hide the alert */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+  }
+  
+  .alert1 {
+    opacity: 1; /* Show the alert with a smooth transition */
+  }
+  
+  .add {
+    /* Add your base styles for the add button here */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.add:hover {
+    /* Apply the hover effects */
+    background-color: #16ff05; /* Change background color */
+    color: #fff; /* Change text color */
+    transform: scale(1.1); /* Increase size on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+.add1 {
+  /* Add your base styles for the add button here */
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, color 0.2s, background-color 0.2s;
+}
+
+.add1:hover {
+  /* Apply the hover effects */
+  background-color: #ff6b6b; /* Change background color */
+  color: #fff; /* Change text color */
+  transform: scale(1.1); /* Increase size on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+}
+/* Stylish header for Community Forum */
+/* Stylish header for Community Forum */
+.globe-header {
+  text-align: center;
+  font-size: 32px; /* Adjust font size as needed */
+  margin-bottom: 30px; /* Adjust margin as needed */
+}
+
+.forum-text {
+  color: #007bff; /* Text color */
+}
+
+.globe-icon {
+  font-size: 32px; /* Adjust icon size as needed */
+  margin-right: 10px; /* Adjust margin as needed */
+  color: #007bff; /* Icon color */
+  animation: spin 2s linear infinite; /* Apply the animation */
+}
+
+.globe-header:hover .globe-icon {
+  transform: scale(1.1); /* Increase icon size on hover */
+}
+
+/* Animation for the globe icon */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

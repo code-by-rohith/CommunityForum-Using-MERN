@@ -1,0 +1,118 @@
+/* RequestForm.css */
+
+.request-form-container {
+    max-width: 600px; /* Increase the maximum width */
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+
+
+.q1 {
+    text-align: center;
+    margin-right: 10%;
+    background-color: #848484;
+    padding: 10%;
+    padding-top: 10%;
+    font-size: 175%;
+    
+}
+
+.request-form {
+    background-color: #f4f4f4;
+    padding: 30px; /* Increase padding for a larger form */
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.request-form:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #007bff, #00ccff);
+    z-index: -1;
+    transition: opacity 0.5s ease;
+    opacity: 0.1;
+    transform: scale(1.5) rotate(45deg);
+}
+
+.request-form:hover:before {
+    opacity: 0.3;
+}
+
+.request-form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 30px; /* Increase margin between form groups */
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 10px; /* Increase margin bottom for labels */
+    font-weight: bold;
+}
+
+.form-input,
+.form-textarea {
+    width: calc(100% - 22px); /* Adjust the width to leave space for borders and padding */
+    padding: 15px; /* Increase padding for input fields */
+    font-size: 18px; /* Increase font size for better readability */
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Increase border radius for rounded corners */
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.submit-button {
+    display: inline-block;
+    padding: 15px 30px; /* Increase padding for the submit button */
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+.submit-button:hover:before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+.submit-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
