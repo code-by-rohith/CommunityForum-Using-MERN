@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 mongoose.connect(
-    'mongodb://localhost:27017/societyDB',
+    'mongodb://localhost:27017/societyDB',//Create a database named societyDB in your mongoDb
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
